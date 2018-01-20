@@ -13,24 +13,33 @@
 </head>
 <body>
     <div>
-        <h1>show what are you doing nice to meet you !</h1>
-        <button class="layui-btn">
-            <i class="layui-icon">&#xe608;</i> 添加
-        </button>
+        <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item"><a href="">最新活动</a></li>
+            <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+            <li class="layui-nav-item"><a href="">大数据</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">解决方案</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">社区</a></li>
+        </ul>
     </div>
-    <div>
-        <h2>
-            just like this who are you know this is she how much wanna you gotin g
-            <button class="layui-btn layui-btn-fluid">流体按钮（最大化适应）</button>
-        </h2>
-    </div>
-    <div>
-       <h3>dot dotit dot dot dot dot dot </h3>
-    </div>
+
 
     <script type="text/javascript" src="resource/layui/layui.js"></script>
     <script type="text/javascript" src="resource/js/project/next.js"></script>
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function(){
+            var element = layui.element;
 
+            //…
+        });
+    </script>
 </body>
 
 </html>
