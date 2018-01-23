@@ -14,6 +14,10 @@
     <mvc:interceptors>
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
     </mvc:interceptors>
+
+    <!--<mvc:default-servlet-handler>-->
+     <!--<mvc:resources mapping="/resource/**" location="/resource/"></mvc:resources>-->
+    <!--</mvc:default-servlet-handler>-->
     <!--&lt;!&ndash; 支持返回json(避免IE在ajax请求时，返回json出现下载 ) &ndash;&gt;-->
     <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
         <!--<property name="webBindingInitializer">-->

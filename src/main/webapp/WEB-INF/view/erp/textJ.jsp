@@ -8,8 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <title>Title</title>
-    <link rel="stylesheet" href="resource/layui/css/layui.css">
+    <link rel="stylesheet" href="/resource/layui/css/layui.css">
 </head>
 <body>
     <div>
@@ -30,8 +31,8 @@
     </div>
 
 
-    <script type="text/javascript" src="resource/layui/layui.js"></script>
-    <script type="text/javascript" src="resource/js/project/next.js"></script>
+    <script type="text/javascript" src="/resource/layui/layui.js"></script>
+    <script type="text/javascript" src="/resource/js/project/next.js"></script>
     <script>
         //注意：导航 依赖 element 模块，否则无法进行功能性操作
         layui.use('element', function(){
@@ -41,5 +42,4 @@
         });
     </script>
 </body>
-
 </html>
