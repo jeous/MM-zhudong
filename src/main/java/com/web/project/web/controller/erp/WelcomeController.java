@@ -22,6 +22,6 @@ public class WelcomeController {
     @ResponseBody
     public void getEntity()
     {
-//        return void;
+
     }
 }
