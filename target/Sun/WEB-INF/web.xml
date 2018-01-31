@@ -28,7 +28,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
-    <url-pattern>/year/*</url-pattern>
+    <url-pattern>/erp/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>default</servlet-name>
@@ -50,9 +50,6 @@
     <!-- 拦截所有/platform的请求,交给DispatcherServlet处理,性能最好 -->
     <url-pattern>*.jpg</url-pattern>
   </servlet-mapping>
-
-
-
   <welcome-file-list>
     <welcome-file>pro/web/index</welcome-file>
     <welcome-file>year/web/index</welcome-file>
