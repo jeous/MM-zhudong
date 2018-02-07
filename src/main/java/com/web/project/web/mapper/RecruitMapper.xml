@@ -3,12 +3,12 @@
   <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.web.project.web.mapper.RecruitMapper">
     <resultMap id="userMap" type="com.web.project.web.model.Recruit">
-        <id property="ID" column="ID"></id>
-        <result property="PNAME" column="PNAME"></result>
-        <result property="PROVINCE" column="PROVINCE"></result>
-        <result property="CREATETIME" column="CREATETIME"></result>
+        <id property="ID" column="ID" javaType="String"></id>
+        <result property="PNAME" column="PNAME" javaType="String"></result>
+        <result property="PROVINCE" column="PROVINCE" javaType="String"></result>
+        <result property="CREATETIME" column="CREATETIME" javaType="Date"></result>
     </resultMap>
     <select id="GetListRecruit"  resultMap="userMap">
-        SELECT * FROM aj_recruit
+            SELECT * FROM aj_recruit
     </select>
     </mapper>

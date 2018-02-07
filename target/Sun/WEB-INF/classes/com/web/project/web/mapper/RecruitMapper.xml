@@ -6,9 +6,9 @@
         <id property="ID" column="ID"></id>
         <result property="PNAME" column="PNAME"></result>
         <result property="PROVINCE" column="PROVINCE"></result>
-
+        <result property="CREATETIME" column="CREATETIME"></result>
     </resultMap>
     <select id="GetListRecruit"  resultMap="userMap">
-        SELECT * FROM aj_recruit
+            SELECT * FROM aj_recruit
     </select>
     </mapper>
