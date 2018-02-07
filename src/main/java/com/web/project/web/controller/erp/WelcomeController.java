@@ -1,5 +1,7 @@
 package com.web.project.web.controller.erp;
 
+import com.mysql.cj.xdevapi.JsonArray;
+import com.web.project.web.model.Recruit;
 import com.web.project.web.service.Ixc;
 import com.web.project.web.service.IxcImpl;
 import org.springframework.stereotype.Controller;
@@ -8,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * Created by Server on 2018/1/17.
  */
@@ -15,17 +20,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/web")
 public class WelcomeController {
 
-    IxcImpl ixc=new IxcImpl();
+    @Resource
+    private IxcImpl ixc;
+
+
     @RequestMapping(value="/index")
     public String getIndex()
     {
         return "erp/textJ";
     }
 
-    @RequestMapping(value="/entity")
+    @RequestMapping(value="/entity",method=RequestMethod.GET,produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public void getEntity()
+    public List<Recruit> getEntity()throws Exception
     {
-        ixc.run();
+
+        List<Recruit> Tlist=ixc.getS();
+        return Tlist;
     }
 }
