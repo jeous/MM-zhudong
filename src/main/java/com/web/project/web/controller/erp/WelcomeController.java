@@ -33,7 +33,7 @@ public class WelcomeController {
         return "erp/textJ";
     }
 
-    @RequestMapping(value="/entity",method=RequestMethod.GET,produces="application/json" )
+    @RequestMapping(value="/entity",method=RequestMethod.POST,produces="application/json" )
     @ResponseBody
     public List<Recruit> getEntity(HttpServletResponse response)throws Exception
     {

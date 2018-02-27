@@ -13,7 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="/resource/layui/css/layui.css">
+
 </head>
+
 <body>
 
 <div class="layui-tab layui-tab-brief">
