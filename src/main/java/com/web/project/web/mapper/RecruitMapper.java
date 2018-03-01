@@ -11,4 +11,8 @@ public interface RecruitMapper {
 
 
     public List<Recruit> GetListRecruit()throws Exception;
+
+    public Recruit insertInfo(Recruit info)throws Exception;
+
+
 }

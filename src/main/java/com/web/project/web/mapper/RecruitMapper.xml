@@ -11,4 +11,5 @@
     <select id="GetListRecruit"  resultMap="userMap">
             SELECT * FROM aj_recruit
     </select>
+
     </mapper>

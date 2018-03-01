@@ -39,5 +39,4 @@ public class IxcImpl implements  Runnable{
         return user;
     }
 
-
 }

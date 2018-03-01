@@ -11,11 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
-
 /**
  * Created by Server on 2018/1/17.
  */
@@ -33,7 +31,7 @@ public class WelcomeController {
         return "erp/textJ";
     }
 
-    @RequestMapping(value="/entity",method=RequestMethod.POST,produces="application/json" )
+    @RequestMapping(value="/entity",method=RequestMethod.GET,produces="application/json" )
     @ResponseBody
     public List<Recruit> getEntity(HttpServletResponse response)throws Exception
     {
