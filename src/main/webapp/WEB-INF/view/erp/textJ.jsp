@@ -77,15 +77,18 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">
-
-          <img src="/images/dog.jpg" width="1599px" height="1063px"/>
-
-            <img src="/images/city.jpg"  width="1599px" height="1063px"/>
-
-            <img src="/images/QQ图片20171129171357.jpg" width="1599px" height="1063px"/>
-
-
+        <div style="padding: 15px;" id="lb" name="lb">
+            <div carousel-item>
+            <div style="padding: 15px;" id="imageI" name="imageI">
+                <img src="/images/dog.jpg" width="1150px" height="1063px"/>
+            </div>
+            <div style="padding: 15px;">
+                <img src="/images/city.jpg"  width="1150px" height="1063px"/>
+            </div>
+            <div style="padding: 15px;">
+                <img src="/images/QQ图片20171129171357.jpg" width="1150px" height="1063px"/>
+            </div>
+            </div>
         </div>
     </div>
 
@@ -94,14 +97,15 @@
         © layui.com 李云龙给你架上了意大利炮！ -
     </div>
 </div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 <script src="/resource/layui/layui.js" charset="UTF-8"></script>
+<script src="/resource/js/project/Tjs.js"></script>
 <script type="text/javascript">
     //JavaScript代码区域
     layui.use('element', function(){
         var element = layui.element;
-
     });
-    $("#text").text("sdfssfsdfsdfsdfsdfsdfsd");
+
 </script>
 </body>
 </html>
