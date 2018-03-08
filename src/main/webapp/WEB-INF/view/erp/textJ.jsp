@@ -18,9 +18,10 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">layui 后台布局</div>
+        <div class="layui-logo">若看</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
-        <ul class="layui-nav layui-layout-left">
+        <div id="we" name="we">
+            <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="">控制台</a></li>
             <li class="layui-nav-item"><a href="">商品管理</a></li>
             <li class="layui-nav-item"><a href="">用户</a></li>
@@ -33,6 +34,7 @@
                 </dl>
             </li>
         </ul>
+        </div>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
@@ -77,19 +79,51 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;" id="lb" name="lb">
-            <div carousel-item>
-            <div style="padding: 15px;" id="imageI" name="imageI">
-                <img src="/images/dog.jpg" width="1150px" height="1063px"/>
-            </div>
-            <div style="padding: 15px;">
-                <img src="/images/city.jpg"  width="1150px" height="1063px"/>
-            </div>
-            <div style="padding: 15px;">
-                <img src="/images/QQ图片20171129171357.jpg" width="1150px" height="1063px"/>
-            </div>
+
+        <table class="layui-hide"  id="test" lay-filter="demo"></table>
+
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+
+        <div class="layui-tab layui-tab-brief" lay-filter="demo">
+            <ul class="layui-tab-title">
+                <li class="layui-this">演示说明</li>
+                <li>日期</li>
+                <li>分页</li>
+                <li>上传</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+
+                    <div class="layui-carousel" id="test1">
+                        <div carousel-item>
+                            <div><p class="layui-bg-green demo-carousel">在这里，你将以最直观的形式体验 layui！</p></div>
+                            <div><p class="layui-bg-red demo-carousel">在编辑器中可以执行 layui 相关的一切代码</p></div>
+                            <div><p class="layui-bg-blue demo-carousel">你也可以点击左侧导航针对性地试验我们提供的示例</p></div>
+                            <div><p class="layui-bg-orange demo-carousel">如果最左侧的导航的高度超出了你的屏幕</p></div>
+                            <div><p class="layui-bg-cyan demo-carousel">你可以将鼠标移入导航区域，然后滑动鼠标滚轮即可</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <div id="laydateDemo"></div>
+                </div>
+                <div class="layui-tab-item">
+                    <div id="pageDemo"></div>
+                </div>
+                <div class="layui-tab-item">
+                    <div class="layui-upload-drag" id="uploadDemo">
+                        <i class="layui-icon"></i>
+                        <p>点击上传，或将文件拖拽到此处</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <blockquote class="layui-elem-quote layui-quote-nm" id="footer">layui {{ layui.v }} 提供强力驱动</blockquote>
     </div>
 
     <div class="layui-footer">

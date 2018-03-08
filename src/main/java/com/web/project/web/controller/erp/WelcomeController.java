@@ -2,6 +2,7 @@ package com.web.project.web.controller.erp;
 
 import com.mysql.cj.xdevapi.JsonArray;
 import com.web.project.web.model.Recruit;
+import com.web.project.web.model.menu;
 import com.web.project.web.service.Ixc;
 import com.web.project.web.service.IxcImpl;
 
@@ -33,10 +34,14 @@ public class WelcomeController {
 
     @RequestMapping(value="/entity",method=RequestMethod.GET,produces="application/json" )
     @ResponseBody
-    public List<Recruit> getEntity(HttpServletResponse response)throws Exception
+    public menu getEntity(HttpServletResponse response)throws Exception
     {
         List<Recruit> Tlist=ixc.getS();
-
-        return Tlist;
+        menu info=new menu();
+         info.setCode(0);
+         info.setMsg("ok");
+         info.setCount(Tlist.size());
+         info.setData(Tlist);
+        return info;
     }
 }
