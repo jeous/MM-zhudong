@@ -6,6 +6,7 @@ import com.web.project.web.model.menu;
 import com.web.project.web.service.Ixc;
 import com.web.project.web.service.IxcImpl;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -18,6 +19,8 @@ import java.util.List;
 /**
  * Created by Server on 2018/1/17.
  */
+@Component("jacksonObjectMapper")
+
 @Controller
 @RequestMapping("/web")
 public class WelcomeController {
@@ -42,6 +45,6 @@ public class WelcomeController {
          info.setMsg("ok");
          info.setCount(Tlist.size());
          info.setData(Tlist);
-        return info;
+         return info;
     }
 }

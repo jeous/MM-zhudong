@@ -41,15 +41,11 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
             {field: 'id', title: 'ID', width:200, sort: true, fixed: 'left'}
             ,{field: 'pname', title: '用户名', width:200}
             ,{field: 'province', title: '创建省份', width:200}
-            ,{field: 'createtime', title: '创建时间', width:200,Formatter:getdata}
+            ,{field: 'createtime', title: '创建时间', width:200}
         ]]
     });
-    function getdata(data) {
-        var t="";
-        var unixt=new Date(data*1000);
-        t=unixt.toLocaleString(unixt);
-        return t;
-    }
+
+
     监听工具条
     table.on('tool(demo)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
         var data = obj.data //获得当前行数据

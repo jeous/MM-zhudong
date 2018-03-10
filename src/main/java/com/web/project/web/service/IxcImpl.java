@@ -15,8 +15,6 @@ import java.util.List;
  */
 @Service
 public class IxcImpl implements  Runnable{
-//    @Resource
-//    private  RecruitMapper recruitMapper;
     public void run() {
         for(int i=0;i<3;i++){
             System.out.println(Thread.currentThread().getName()
