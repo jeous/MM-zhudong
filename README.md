@@ -5,3 +5,5 @@ ERP(EnterpriseResourcePlanning)企业资源计划系统，是指建立在信息�
    这个ERP组成:spring mvc+mysql+shiro+spring+maven 
 	 
    前台登录采用shiro权限功能 
+   
+个人简历：https://www.chuangkit.com/sharedesign?d=9ce27f3f-ad80-40b5-b47b-e6014dddf148
