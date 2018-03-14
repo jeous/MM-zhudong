@@ -3,9 +3,11 @@ package com.web.project.web.controller.erp;
 import com.mysql.cj.xdevapi.JsonArray;
 import com.web.project.web.model.Recruit;
 import com.web.project.web.model.menu;
+import com.web.project.web.model.ouser.User;
 import com.web.project.web.service.Ixc;
 import com.web.project.web.service.IxcImpl;
 
+import com.web.project.web.service.User.IuserImpl;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 /**
@@ -26,7 +29,7 @@ import java.util.List;
 public class WelcomeController {
 
     @Resource
-    private IxcImpl ixc;
+    private IuserImpl ixc;
 
 
     @RequestMapping(value="/index")
@@ -37,14 +40,16 @@ public class WelcomeController {
 
     @RequestMapping(value="/entity",method=RequestMethod.GET,produces="application/json" )
     @ResponseBody
-    public menu getEntity(HttpServletResponse response)throws Exception
+    public menu getEntity(HttpServletRequest request,HttpServletResponse response,User infoParameter)throws Exception
     {
-        List<Recruit> Tlist=ixc.getS();
-        menu info=new menu();
+
+         List<User> Tlist=ixc.GetListUser(infoParameter);
+        int count=ixc.GetCount();
+         menu info=new menu();
          info.setCode(0);
          info.setMsg("ok");
-         info.setCount(Tlist.size());
-         info.setData(Tlist);
+         info.setCount(count);
+        info.setData(Tlist);
          return info;
     }
 }

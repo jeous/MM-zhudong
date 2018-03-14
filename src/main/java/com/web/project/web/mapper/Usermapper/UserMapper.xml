@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.project.web.mapper.Usermapper.UserMapper">
+    <resultMap id="userMap" type="com.web.project.web.model.ouser.User">
+        <id property="id" column="id" javaType="String"></id>
+        <result property="realname" column="realname" javaType="String"></result>
+        <result property="idnumber" column="idnumber" javaType="String"></result>
+        <result property="account" column="account" javaType="String"></result>
+    </resultMap>
+    <select id="GetListUser"  resultMap="userMap" parameterType="com.web.project.web.model.ouser.User">
+        SELECT * FROM aj_usersT LIMIT #{page},#{limit}
+    </select>
+    <select id="GetListUserCount" resultType="int">
+        SELECT COUNT(*) FROM aj_users
+    </select>
+</mapper>

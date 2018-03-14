@@ -11,7 +11,7 @@ import java.io.Reader;
  * Created by Server on 2018/2/2.
  */
 public  class DBTools {
-    static SqlSessionFactory sessionFactory;
+   public static SqlSessionFactory sessionFactory;
     static{
         try {
             //使用MyBatis提供的Resources类加载mybatis的配置文件

@@ -34,14 +34,14 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
     //执行一个 table 实例
     table.render({
         elem: '#test'
-        ,height: 332
+        ,height: 500
         ,url: 'pro/web/entity' //数据接口
         ,page: true //开启分页
         ,cols: [[ //表头
             {field: 'id', title: 'ID', width:200, sort: true, fixed: 'left'}
-            ,{field: 'pname', title: '用户名', width:200}
-            ,{field: 'province', title: '创建省份', width:200}
-            ,{field: 'createtime', title: '创建时间', width:200}
+            ,{field: 'realname', title: '用户名', width:200}
+            ,{field: 'idnumber', title: '位置', width:200}
+            ,{field: 'account', title: '创建时间',align:'center', width:200,toolbar: '#barDemo'}
         ]]
     });
 
@@ -104,6 +104,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
             }
         }
     });
+
 
     上传
     upload.render({
